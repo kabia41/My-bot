@@ -18,7 +18,7 @@ client.on('message', message => {
         const SunucuEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('**!!Sunucu Bilgileri!!**')
-        .setAuthor(botname)
+        .setAuthor(process.env.botname)
         .setDescription('Muratın Yaptığı Botun olduğu sunucunun bilgileri')
         .addFields(
             { name: '\u200B', value: '\u200B' },
@@ -32,7 +32,7 @@ client.on('message', message => {
     }
     else if (message.content.startsWith(`!beep`)) {
         const beepembed = new Discord.MessageEmbed()
-    .setAuthor(botname)
+    .setAuthor(process.env.botname)
     .setColor('#00F3FF')
     .setTitle('**Boop**')
         message.channel.send(beepembed);
@@ -42,14 +42,14 @@ client.on('message', message => {
             const testembed = new Discord.MessageEmbed()
         .setColor('#00F3FF')
         .setTitle('**Test Komudu**')
-        .setAuthor(botname)
+        .setAuthor(process.env.botname)
         .setDescription('**Test Komudu Çalıştırıldı**')
             message.author.send(testembed)
         } else {
             const testembed = new Discord.MessageEmbed()
         .setColor('#00F3FF')
         .setTitle('**Test Komudu**')
-        .setAuthor(botname)
+        .setAuthor(process.env.botname)
         .setDescription('**Sen Murat Kaan değilsin**')
             message.author.send(testembed)
         }
@@ -58,7 +58,7 @@ client.on('message', message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#399A26')
 	.setTitle('**!!Komutlar!!**')
-	.setAuthor(botname)
+	.setAuthor(process.env.botname)
 	.setDescription('Bu Muratın yaptığı bir Discord botunun komutlarıdır')
 	.addFields(
 		{ name: '***Bazı komutlar***', value: '***2 komut***' },
