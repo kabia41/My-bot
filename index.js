@@ -8,11 +8,16 @@ client.once('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!ping') {
+        var ping = Date.now() - message.createdTimestamp + " ms";
         const pingembed = new Discord.MessageEmbed()
-    .setAuthor(process.env.botname)
-    .setColor('#00F3FF')
-    .setTitle('**Pong**')
-        message.channel.send(pingembed);
+        .setColor('#0099ff')
+        .setTitle('**Pong**'),
+        .setDescription("Ping'in")
+        .addFields(
+            { name: 'Şuanki pingin', value: "Your ping is `" + `${Date.now() - message.createdTimestamp}` + " ms`" }
+        )
+        
+        message.author.send(pingembed)
     }
     else if (message.content === `!sunucu`) {
         const SunucuEmbed = new Discord.MessageEmbed()
