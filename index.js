@@ -11,12 +11,9 @@ client.on('message', message => {
         var ping = Date.now() - message.createdTimestamp + " ms";
         const pingembed = new Discord.MessageEmbed()
         .setColor('#0099ff')
-        .setTitle('**Pong**'),
-        .setDescription("Ping'in")
-        .addFields(
-            { name: 'Şuanki pingin', value: "Your ping is `" + `${Date.now() - message.createdTimestamp}` + " ms`" }
-        )
-        
+        .setTitle('**Pong**')
+        .setDescription("Your ping is `" + `${Date.now() - message.createdTimestamp}` + " ms`");
+
         message.author.send(pingembed)
     }
     else if (message.content === `!sunucu`) {
