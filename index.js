@@ -9,7 +9,8 @@ client.once('ready', () => {
 client.on('message', message => {
     if (message.content === '!ping') {
         const pingembed = new Discord.MessageEmbed()
-    .setAuthor(botname, 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')    .setColor('#00F3FF')
+    .setAuthor(process.env.botname)
+    .setColor('#00F3FF')
     .setTitle('**Pong**')
         message.channel.send(pingembed);
     }
@@ -17,22 +18,22 @@ client.on('message', message => {
         const SunucuEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('**!!Sunucu Bilgileri!!**')
-        .setAuthor(botname, 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')
+        .setAuthor(botname)
         .setDescription('Muratın Yaptığı Botun olduğu sunucunun bilgileri')
-        .setThumbnail('https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')
         .addFields(
             { name: '\u200B', value: '\u200B' },
             { name: '**Sunucu İsmi**', value: message.guild.name },
             { name: '**Sunucu Katılımcı Sayısı**', value: message.guild.memberCount },
         )
         .setTimestamp()
-        .setFooter('Murata yardım gönderin', 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/');
+        .setFooter('Murata yardım gönderin');
     
             message.author.send(SunucuEmbed);    
     }
     else if (message.content.startsWith(`!beep`)) {
         const beepembed = new Discord.MessageEmbed()
-    .setAuthor(botname, 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')    .setColor('#00F3FF')
+    .setAuthor(botname)
+    .setColor('#00F3FF')
     .setTitle('**Boop**')
         message.channel.send(beepembed);
     }
@@ -43,7 +44,6 @@ client.on('message', message => {
         .setTitle('**Test Komudu**')
         .setAuthor(botname)
         .setDescription('**Test Komudu Çalıştırıldı**')
-        .setThumbnail('https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')
             message.author.send(testembed)
         } else {
             const testembed = new Discord.MessageEmbed()
@@ -58,9 +58,8 @@ client.on('message', message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#399A26')
 	.setTitle('**!!Komutlar!!**')
-	.setAuthor(botname, 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')
+	.setAuthor(botname)
 	.setDescription('Bu Muratın yaptığı bir Discord botunun komutlarıdır')
-	.setThumbnail('https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/')
 	.addFields(
 		{ name: '***Bazı komutlar***', value: '***2 komut***' },
 		{ name: '\u200B', value: '\u200B' },
@@ -71,7 +70,7 @@ client.on('message', message => {
         { name: '**!testkomudu**', value: '*Sadece Murat Kaan çalıştırabilir*' }
 	)
 	.setTimestamp()
-	.setFooter('Murata yardım gönderin', 'https://steamuserimages-a.akamaihd.net/ugc/945081401924436013/8E29ECAE9C4CD0FCBAAC94D53683A5373D55B4A0/');
+	.setFooter('Murata yardım gönderin');
 
         message.author.send(exampleEmbed);
     }
