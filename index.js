@@ -23,7 +23,7 @@ client.on('message', message => {
     const cmd = args().toLowerCase();
 
     if (cmd == "ping") {
-        const msg = await message.channel.send('Pingleniyor...')
+        const msg = await async message.channel.send('Pingleniyor...')
 
         msg.edit('Pong\nGecikme süren: ${Math.floor(msg.createdAt - message.createdAt)}\nAPI gecikmen: ${Math.round(client.ping)}ms')
     }
