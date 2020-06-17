@@ -68,7 +68,7 @@ client.on('message', message => {
 		{ name: '**!sunucu**', value: '*Sunucu hakkında bilgi verir*' },
         { name: '**!komutlar**', value: '*Komutları gösterir*' },
         { name: '**!beep**', value: '*Eğlence Komudu*' },
-        { name: '**!ping**', value: '*Eğlence Komudu*' },
+        { name: '**!ping**', value: '*Sunucudaki gecikmeni söyler*' },
         { name: '**!testkomudu**', value: '*Sadece Murat Kaan çalıştırabilir*' }
 	)
 	.setTimestamp()
